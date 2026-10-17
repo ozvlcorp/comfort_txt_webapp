@@ -15,7 +15,7 @@ const icons={"refresh":"<path d=\"M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L
 // Icons: Lucide (lucide.dev), the icon set used by shadcn/ui and 21st.dev components.
 const icon = (name, cls='') => `<svg class="icon ${cls}" viewBox="0 0 24 24" aria-hidden="true">${icons[name]||icons.box}</svg>`;
 const isDark=()=>document.documentElement.dataset.theme==='dark';
-function setTheme(mode){document.documentElement.dataset.theme=mode;try{localStorage.setItem('comfort-theme',mode);}catch{}document.querySelector('meta[name="theme-color"]')?.setAttribute('content',mode==='dark'?'#080b12':'#eef2f9');document.querySelectorAll('[data-action="theme"]').forEach(b=>{b.innerHTML=icon(mode==='dark'?'sun':'moon');b.setAttribute('aria-label',themeLabel());});}
+function setTheme(mode){document.documentElement.dataset.theme=mode;try{localStorage.setItem('comfort-theme',mode);}catch{}document.querySelector('meta[name="theme-color"]')?.setAttribute('content',mode==='dark'?'#0d1029':'#f9f5ec');document.querySelectorAll('[data-action="theme"]').forEach(b=>{b.innerHTML=icon(mode==='dark'?'sun':'moon');b.setAttribute('aria-label',themeLabel());});}
 const themeLabel=()=>isDark()?t('Yorug‘ mavzu','Светлая тема'):t('Qorong‘i mavzu','Тёмная тема');
 const themeButton=()=>`<button type="button" class="text-btn theme-btn" data-action="theme" aria-label="${themeLabel()}" title="${themeLabel()}">${icon(isDark()?'sun':'moon')}</button>`;
 const PRODUCTS=[
