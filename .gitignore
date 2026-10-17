@@ -1,0 +1,13 @@
+node_modules/
+.local/
+*.tar.gz
+
+node_modules/
+.next/
+.vinext/
+.wrangler/
+.sites-runtime/
+.env*
+!.env.example
+
+dist/
