@@ -1,0 +1,1 @@
+import{t as e}from"./static-CY_jxhLs.js";var t=`force-dynamic`;function n(){return e(`index.html`)}export{n as GET,t as dynamic};
